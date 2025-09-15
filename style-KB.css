@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #c9f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.keyboard {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.keyboard form input {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background: #414141;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.keyboard form input[value="esc"],
+.keyboard form input[value="F1"],
+.keyboard form input[value="F2"],
+.keyboard form input[value="F3"],
+.keyboard form input[value="F4"],
+.keyboard form input[value="F5"],
+.keyboard form input[value="F6"],
+.keyboard form input[value="F7"],
+.keyboard form input[value="F8"],
+.keyboard form input[value="F9"],
+.keyboard form input[value="F10"],
+.keyboard form input[value="F11"],
+.keyboard form input[value="F12"],
+.keyboard form input[value="~"],
+.keyboard form input[value="1"],
+.keyboard form input[value="2"],
+.keyboard form input[value="3"],
+.keyboard form input[value="4"],
+.keyboard form input[value="5"],
+.keyboard form input[value="6"],
+.keyboard form input[value="7"],
+.keyboard form input[value="8"],
+.keyboard form input[value="9"],
+.keyboard form input[value="0"],
+.keyboard form input[value="-"],
+.keyboard form input[value="="],
+.keyboard form input[value="Q"],
+.keyboard form input[value="q"],
+.keyboard form input[value="W"],
+.keyboard form input[value="w"],
+.keyboard form input[value="E"],
+.keyboard form input[value="e"],
+.keyboard form input[value="R"],
+.keyboard form input[value="r"],
+.keyboard form input[value="T"],
+.keyboard form input[value="t"],
+.keyboard form input[value="Y"],
+.keyboard form input[value="y"],
+.keyboard form input[value="U"],
+.keyboard form input[value="u"],
+.keyboard form input[value="I"],
+.keyboard form input[value="i"],
+.keyboard form input[value="O"],
+.keyboard form input[value="o"],
+.keyboard form input[value="P"],
+.keyboard form input[value="p"],
+.keyboard form input[value="["],
+.keyboard form input[value="]"],
+.keyboard form input[value="A"],
+.keyboard form input[value="a"],
+.keyboard form input[value="S"],
+.keyboard form input[value="s"],
+.keyboard form input[value="D"],
+.keyboard form input[value="d"],
+.keyboard form input[value="F"],
+.keyboard form input[value="f"],
+.keyboard form input[value="G"],
+.keyboard form input[value="g"],
+.keyboard form input[value="H"],
+.keyboard form input[value="h"],
+.keyboard form input[value="J"],
+.keyboard form input[value="j"],
+.keyboard form input[value="K"],
+.keyboard form input[value="k"],
+.keyboard form input[value="L"],
+.keyboard form input[value="l"],
+.keyboard form input[value=";"],
+.keyboard form input[value="'"],
+.keyboard form input[value="Z"],
+.keyboard form input[value="z"],
+.keyboard form input[value="X"],
+.keyboard form input[value="x"],
+.keyboard form input[value="C"],
+.keyboard form input[value="c"],
+.keyboard form input[value="V"],
+.keyboard form input[value="v"],
+.keyboard form input[value="B"],
+.keyboard form input[value="b"],
+.keyboard form input[value="N"],
+.keyboard form input[value="n"],
+.keyboard form input[value="M"],
+.keyboard form input[value="m"],
+.keyboard form input[value=","],
+.keyboard form input[value="."],
+.keyboard form input[value="/"] {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: #000000 1px 1px 2px;
+  font-size: 25px;
+}
+
+.keyboard form input[value="Ctrl"],
+.keyboard form input[value="fn"],
+.keyboard form input[value="Alt"],
+.keyboard form input[value="Menu"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 70px;
+}
+
+.keyboard form input[value="⊞"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 70px;
+  font-size: 25px;
+}
+
+.keyboard form input[value="________"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 459px;
+}
+
+.keyboard form input[value="←"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 118px;
+  font-size: 30px;
+}
+
+.keyboard form input[value="Tab"],
+.keyboard form input[value="|"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 89px;
+}
+
+.keyboard form input[value="Caps Lock"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 117px;
+}
+
+.keyboard form input[value="Enter"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 130px;
+}
+
+.keyboard form input[value="LShift"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 153px;
+}
+
+.keyboard form input[value="RShift"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 162px;
+}
+
+.display {
+  width: 100%;
+  width: 700px;
+  height: 50px;
+  margin-bottom: 30px;
+  margin-top: -30px;
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.display input {
+  text-align: center;
+  flex: 1;
+  font-size: 40px;
+  color: hsl(0, 0%, 0%);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  text-shadow: none;
+  border: none;
+}
+
+.header {
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+}
+
+.keyboard form input[value="●"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: #000000 1px 1px 2px;
+  width: 118px;
+  font-size: 25px;
+}
+
+.keyboard form input:hover {
+  background: #f3f3f3;
+  color: #000000;
+}
+
+.keyboard input[type="button"].pressed {
+  transform: scale(0.9);
+  /* shrink a little */
+  background-color: #f3f3f3;
+  /* temporary color */
+}

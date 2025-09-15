@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E market</title>
+    <link rel="stylesheet" href="style-E.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>E Market</h1>
+
+        <div class="search-input">
+            <input type="text" id="search-line" placeholder="Enter item name...">
+            <button id="button-search">Search</button>
+        </div>
+        <div class="items">
+            <img src="milk.png" id="Milk-item" height="150" width="150"><br />
+            <button id="ADD-Milk">Milk<br />Add to cart - <span id="Milk"></span></button>
+            <img src="Egg.png" id="Egg-item" height="150" width="150"><br />
+            <button id="ADD-Egg">Egg<br />Add to cart - <span id="Egg"></span></button>
+            <img src="banana.png" id="Banana-item" height="150" width="150"><br />
+            <button id="ADD-Banana">Banana<br />Add to cart - <span id="Banana"></span></button>
+        </div>
+    </div>
+    <div class="container2">
+        <h2>Cart</h2>
+        <ul id="cart-list">
+
+        </ul>
+        <h3>Total: <span id="total">0</span>$</h3>
+    </div>
+    <button id="button3" onclick="openPopup()">Pay Now</button>
+    <div id="myPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h1>Card Details</h1>
+            <p><input type="text" id="Numbers" placeholder="Enter card numbers..."></p>
+            <br />
+            <p><input type="text" id="CVV" placeholder="Enter card CVV..."></p>
+            <button id="button1" onclick="closePopup()">Cancel</button>
+            <button id="button2" onclick="getScammed()">Next</button>
+        </div>
+    </div>
+    <script>
+        let MilkPrize = 2;
+        document.getElementById("Milk").textContent = MilkPrize + "$";
+
+        let EggPrize = 2;
+        document.getElementById("Egg").textContent = EggPrize + "$";
+
+        let BananaPrize = 3;
+        document.getElementById("Banana").textContent = BananaPrize + "$";
+
+        const addMilkBtn = document.getElementById("ADD-Milk");
+        const addEggBtn = document.getElementById("ADD-Egg");
+        const addBananaBtn = document.getElementById("ADD-Banana");
+        const cartList = document.getElementById("cart-list");
+        const totalDisplay = document.getElementById("total");
+
+        let total = 0;
+
+        // Reusable function to add an item
+        function addToCart(itemName, price) {
+            // Create new list item
+            const li = document.createElement("li");
+            li.textContent = `${itemName} - ${price}$ `;
+
+            // Create remove button
+            const removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove"; // give it text
+            removeBtn.classList.add("remove-btn"); // add a class
+
+            // Remove item when button clicked
+            removeBtn.addEventListener("click", () => {
+                cartList.removeChild(li);
+                total -= price;
+                totalDisplay.textContent = total;
+            });
+
+            // Add button inside <li>
+            li.appendChild(removeBtn);
+
+            // Add item to cart list
+            cartList.appendChild(li);
+
+            // Update total
+            total += price;
+            totalDisplay.textContent = total;
+        }
+
+        // Event listeners for buttons
+        addMilkBtn.addEventListener("click", () => addToCart("Milk", MilkPrize));
+        addEggBtn.addEventListener("click", () => addToCart("Egg", EggPrize));
+        addBananaBtn.addEventListener("click", () => addToCart("Banana", BananaPrize));
+
+        function openPopup() {
+            document.getElementById('myPopup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('myPopup').style.display = 'none';
+        }
+
+        function getScammed() {
+            alert('You Just Got Scammed(Skill Isuss FR)')
+        }
+    </script>
+</body>
+
+</html>

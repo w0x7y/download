@@ -1,0 +1,178 @@
+<!DOCTYPE html> <!--  Idan Gilboa And Yuval Keyboard Fr -->
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+    <link rel="stylesheet" href="style-KB.css">
+</head>
+
+<body>
+    <dive class="header">
+        <h1>Keyboard</h1>
+        <h2>Simple Keyboard made with HTML, CSS, and JavaScript</h2>
+    </dive>
+    <div class="container">
+        <div class="display">
+            <input type="text" name="display" id="display">
+        </div>
+        <div class="keyboard">
+            <form>
+                <div>
+                    <input type="button" value="esc" onclick="display.value = ''">
+                    <input type="button" value="F1" onclick="display.value = ''">
+                    <input type="button" value="F2" onclick="display.value = ''">
+                    <input type="button" value="F3" onclick="display.value = ''">
+                    <input type="button" value="F4" onclick="display.value = ''">
+                    <input type="button" value="F5" onclick="display.value = ''">
+                    <input type="button" value="F6" onclick="display.value = ''">
+                    <input type="button" value="F7" onclick="display.value = ''">
+                    <input type="button" value="F8" onclick="display.value = ''">
+                    <input type="button" value="F9" onclick="display.value = ''">
+                    <input type="button" value="F10" onclick="display.value = ''">
+                    <input type="button" value="F11" onclick="display.value = ''">
+                    <input type="button" value="F12" onclick="display.value = ''">
+                    <input type="button" value="●" class="letter-key highlight-key" onclick="display.value += ''">
+                </div>
+                <div>
+                    <input type="button" value="~" onclick="display.value += '~'">
+                    <input type="button" value="1" onclick="display.value += '1'">
+                    <input type="button" value="2" onclick="display.value += '2'">
+                    <input type="button" value="3" onclick="display.value += '3'">
+                    <input type="button" value="4" onclick="display.value += '4'">
+                    <input type="button" value="5" onclick="display.value += '5'">
+                    <input type="button" value="6" onclick="display.value += '6'">
+                    <input type="button" value="7" onclick="display.value += '7'">
+                    <input type="button" value="8" onclick="display.value += '8'">
+                    <input type="button" value="9" onclick="display.value += '9'">
+                    <input type="button" value="0" onclick="display.value += '0'">
+                    <input type="button" value="-" onclick="display.value += '-'">
+                    <input type="button" value="=" onclick="display.value += '='">
+                    <input type="button" value="←" onclick="display.value = display.value.toString().slice(0, -1)">
+                </div>
+                <div>
+                    <input type="button" value="Tab" onclick="display.value += '    '">
+                    <input type="button" value="Q" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="W" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="E" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="R" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="T" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="Y" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="U" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="I" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="O" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="P" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="[" onclick="display.value += '['">
+                    <input type="button" value="]" onclick="display.value += ']'">
+                    <input type="button" value="|" onclick="display.value += '|'">
+                </div>
+                <div>
+                    <input type="button" value="Caps Lock" id="capsLockBtn" onclick="toggleCapsLock(this)">
+                    <input type="button" value="A" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="S" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="D" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="F" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="G" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="H" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="J" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="K" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="L" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value=";" onclick="display.value += ';'">
+                    <input type="button" value="'" onclick="display.value += '\''">
+                    <input type="button" value="Enter" onclick="showSendMessage()">
+                </div>
+                <div>
+                    <input type="button" value="LShift" onclick="display.value += ''">
+                    <input type="button" value="Z" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="X" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="C" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="V" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="B" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="N" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="M" class="letter-key" onclick="letterClick(this)">
+                    <input type="button" value="," onclick="display.value += ','">
+                    <input type="button" value="." onclick="display.value += '.'">
+                    <input type="button" value="/" onclick="display.value += '/'">
+                    <input type="button" value="RShift" onclick="display.value += ''">
+                </div>
+                <div>
+                    <input type="button" value="Ctrl" onclick="display.value += ''">
+                    <input type="button" value="⊞" onclick="display.value += ''">
+                    <input type="button" value="Alt" onclick="display.value += ''">
+                    <input type="button" value="________" onclick="display.value += ' '">
+                    <input type="button" value="Alt" onclick="display.value += ''">
+                    <input type="button" value="fn" onclick="display.value += ''">
+                    <input type="button" value="Menu" onclick="display.value += ''">
+                    <input type="button" value="Ctrl" onclick="display.value += ''">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let capsLock = true; // Start with uppercase
+
+        function toggleCapsLock(btn) {
+            capsLock = !capsLock;
+            btn.classList.toggle('active', capsLock);
+
+            // Update all letter keys
+            document.querySelectorAll('.letter-key').forEach(key => {
+                key.value = capsLock ? key.value.toUpperCase() : key.value.toLowerCase();
+                key.setAttribute('data-char', key.value);
+            });
+
+            // Change color of the special key
+            const specialKey = document.querySelector('.highlight-key');
+            if (capsLock) {
+                specialKey.style.color = '#74C365'; // Green when active
+                specialKey.style.textShadow = '0 0 5px #A8E4A0'; // Green glow effect
+            } else {
+                specialKey.style.color = ''; // Default color when inactive
+                specialKey.style.textShadow = ''; // Remove glow effect
+            }
+        }
+
+        // When a letter key is clicked, add its value to the display
+        function letterClick(btn) {
+            const display = document.getElementById('display');
+            display.value += btn.getAttribute('data-char') || btn.value;
+        }
+        // Initialize data-char for all letter keys on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.letter-key').forEach(key => {
+                key.setAttribute('data-char', key.value);
+            });
+        });
+        function showSendMessage() {
+            const display = document.getElementById('display');
+            display.value = 'Send!';
+            display.style.transition = 'opacity 0.5s';
+            display.style.opacity = '1';
+            setTimeout(() => {
+                display.style.opacity = '0';
+                setTimeout(() => {
+                    display.value = '';
+                    display.style.opacity = '1';
+                }, 500);
+            }, 2000);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const keys = document.querySelectorAll(".keyboard input[type='button']");
+
+            // Mouse press
+            keys.forEach(key => {
+                key.addEventListener("mousedown", () => {
+                    key.classList.add("pressed");
+                });
+                key.addEventListener("mouseup", () => {
+                    key.classList.remove("pressed");
+                });
+                key.addEventListener("mouseleave", () => {
+                    key.classList.remove("pressed"); // in case mouse leaves while pressed
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!--  Idan Gilboa Piano Fr -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Piano</title>
+    <link rel="stylesheet" href="style-P.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Piano</h1>
+        <h2>Simple Piano made with HTML, CSS, and JavaScript</h2>
+    </div>
+    <div class="container">
+        <div class="piano">
+            <form>
+                <input type="button" value="C" id="C" class="white-key" onclick="playSound('C')">
+                <input type="button" value="D" id="D" class="white-key" onclick="playSound('D')">
+                <input type="button" value="E" id="E" class="white-key" onclick="playSound('E')">
+                <input type="button" value="F" id="F" class="white-key" onclick="playSound('F')">
+                <input type="button" value="G" id="G" class="white-key" onclick="playSound('G')">
+                <input type="button" value="A" id="A" class="white-key" onclick="playSound('A')">
+                <input type="button" value="B" id="B" class="white-key" onclick="playSound('B')">
+                <input type="button" value="C#" id="CSharp" class="black-key" onclick="playSound('CSharp')">
+                <input type="button" value="D#" id="DSharp" class="black-key" onclick="playSound('DSharp')">
+                <input type="button" value="F#" id="FSharp" class="black-key" onclick="playSound('FSharp')">
+                <input type="button" value="G#" id="GSharp" class="black-key" onclick="playSound('GSharp')">
+                <input type="button" value="A#" id="ASharp" class="black-key" onclick="playSound('ASharp')">
+            </form>
+        </div>
+        <div class="keyboard-inputs">
+            <h3>a=C s=D d=E f=F z=G x=A c=B q=C# w=D# e=F# r=G# t=A#</h3>
+        </div>
+    </div>
+
+    <script>
+        function playSound(note) {
+            var audio = new Audio('notes/' + note + '.mp3');
+
+            // default volume
+            audio.volume = 0.2;
+
+            // make A# louder
+            if (note === "ASharp") {
+                audio.volume = 0.7;
+            }
+
+            audio.currentTime = 0; // restart if already playing
+            audio.play();
+
+            // highlight pressed key
+            const btn = document.getElementById(note);
+            if (btn) {
+                btn.classList.add("active");
+                // remove active after short time
+                setTimeout(() => btn.classList.remove("active"), 150);
+            }
+        }
+
+        // Map keyboard keys to piano notes
+        const keyToNote = {
+            "a": "C",
+            "s": "D",
+            "d": "E",
+            "f": "F",
+            "z": "G",
+            "x": "A",
+            "c": "B",
+            "q": "CSharp",
+            "w": "DSharp",
+            "e": "FSharp",
+            "r": "GSharp",
+            "t": "ASharp"
+        };
+
+        document.addEventListener("keydown", function (event) {
+            const note = keyToNote[event.key.toLowerCase()];
+            if (note) {
+                playSound(note);
+            }
+        });
+    </script>
+</body>
+
+</html>
