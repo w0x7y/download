@@ -559,6 +559,9 @@ nav {
         height: 370px;
     }
 
+    .calc-description {
+        display: none;
+    {
     .calc-CSS {
         left: 40px;
         top: 130px;
@@ -593,4 +596,5 @@ nav {
         display: flex;
     }
 }
+
 
